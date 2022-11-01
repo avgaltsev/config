@@ -1,0 +1,42 @@
+{
+	"name": "@somethings/config",
+	"version": "0.0.0",
+	"description": "Simple JSON config tools.",
+	"keywords": [],
+	"author": {
+		"name": "Anton Galtsev",
+		"email": "avgaltsev@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/avgaltsev/config"
+	},
+	"license": "MIT",
+	"type": "commonjs",
+	"directories": {
+		"lib": "./lib/"
+	},
+	"exports": {
+		".": "./lib/index.js"
+	},
+	"main": "./lib/index.js",
+	"scripts": {
+		"lint": "eslint .",
+		"build": "tsc --skipLibCheck",
+		"watch": "tsc --skipLibCheck --watch",
+		"prepare": "npm run lint && npm run build",
+		"postversion": "git push --tags origin HEAD"
+	},
+	"devDependencies": {
+		"@somethings/eslint-config-base": "^7.0.1",
+		"@somethings/eslint-config-typescript": "^4.0.1",
+		"@types/node": "^18.11.8",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"typescript": "^4.8.4"
+	},
+	"dependencies": {
+		"@somethings/json": "avgaltsev/json"
+	}
+}
